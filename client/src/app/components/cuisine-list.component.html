@@ -1,0 +1,36 @@
+
+<h2>List of Cuisines</h2>
+
+
+  <ul>
+    <li *ngFor="let c of cuisines" [routerLink]="[c.cusisine, '/restaurants']">
+      <h4>{{ c.name }}</h4>
+    </li>
+  </ul>
+
+<button type="button" [routerLink]="[':cusisine/restaurants']">View 2</button>
+
+
+<!-- <div *ngFor="let c of cuisines">
+    <code>{{c.cuisine}}</code>
+</div> -->
+
+<!-- <form (ngSubmit)="getList()">
+    <table>
+         <tr>
+            <td>
+                <input type="text" formControlName="cuisine">
+            </td>
+            <td></td>
+        </tr> -->
+        <!-- <tr>
+            <td>
+            </td>
+            <td>
+                <button type="submit">GET LIST OF CUISINE</button>
+            </td>
+        </tr>
+        
+    </table>
+</form> -->
+<!-- [routerLink]="['/restaurant']" -->

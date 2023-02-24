@@ -1,0 +1,51 @@
+ <h2>View 3</h2>
+
+ <form [formGroup]="form" (ngSubmit)="processForm()">
+    <table>
+        <tr>
+            <td>Name:</td>
+            <!-- <td>{{name}}</td> -->
+        </tr>
+        <tr>
+            <td>Cuisine:</td>
+            <!-- <td>{{cuisine}}</td> -->
+        </tr>
+        <tr>
+            <td>Address:</td>
+            <!-- <td>{{address}}</td> -->
+        </tr>
+        <tr>
+            <td><img src="" alt=""></td>
+        </tr>
+        <div>
+            <h2>Comment</h2>
+        </div>
+        <tr>
+            <td>Name:</td>
+            <input type="text" size="30" placeholder="PlaceHolder" formControlName="name">
+        </tr>
+        <tr>
+            <td>
+                <select id="rating" formControlName="rating" >
+                    <option value="1" >1</option>
+                    <option value="2" >2</option>
+                    <option value="3" >3</option>
+                    <option value="4" >4</option>
+                    <option value="5" >5</option>
+                  </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <textarea id="text" cols="30" rows="10" formControlName="text"></textarea>
+            </td>
+        </tr>
+        <td>
+            <div>
+                <button type="button" [routerLink]="[':cusisine/restaurants']">Back</button>
+                <button type="submit"[disabled]="form.invalid">Submit</button>
+            </div>
+        </td>
+    </table>
+ </form>

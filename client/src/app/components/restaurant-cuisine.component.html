@@ -1,0 +1,15 @@
+
+<h2>List of Restaurants</h2>
+
+<table>
+    <tbody>
+        <ul>
+            <li *ngFor="let c of cuisines" [routerLink]="['/cuisine', c.restaurantId]">
+              <h4>{{ c.name }}</h4>
+            </li>
+          </ul>
+    </tbody>
+    <button type="button" [routerLink]="['/']">Back</button>
+    <button type="button" [routerLink]="[':restaurantId/details']">View 3</button>
+
+</table>
